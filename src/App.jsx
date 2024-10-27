@@ -7,7 +7,7 @@ function App() {
 
   const weatherFunc= async(city) => {
     try {
-      const data = await fetch(`http://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_APIKEY}&q=${city}&aqi=yes`)
+      const data = await fetch(`https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_APIKEY}&q=${city}&aqi=yes`)
       if (data.ok) {
         const datajson = await data.json()
         console.log(datajson) 
